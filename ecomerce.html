@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrthoCare - Orthopaedic Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>OrthoCare</h1>
+            <p>Your Orthopaedic Solution Center</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Premium Orthopaedic Products</h2>
+                <p>High-quality braces, supports, and rehabilitation equipment</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h2>Our Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="images/knee-brace.jpg" alt="Knee Support">
+                    <h3>Knee Supports</h3>
+                    <a href="products.html?category=knee" class="btn">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/back-brace.jpg" alt="Back Support">
+                    <h3>Back Supports</h3>
+                    <a href="products.html?category=back" class="btn">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/ankle-brace.jpg" alt="Ankle Support">
+                    <h3>Ankle Supports</h3>
+                    <a href="products.html?category=ankle" class="btn">View Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose OrthoCare?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Medical Grade</h3>
+                    <p>All our products meet medical standards</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Shipping</h3>
+                    <p>Get your products within 2-3 business days</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Advice</h3>
+                    <p>Consult with our orthopaedic specialists</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@orthocare.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Medical Drive, Health City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 OrthoCare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+products.html
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - OrthoCare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="products-main">
+        <section class="products-filter">
+            <h2>Orthopaedic Products</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="knee">Knee Supports</option>
+                    <option value="back">Back Supports</option>
+                    <option value="ankle">Ankle Supports</option>
+                    <option value="wrist">Wrist Supports</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="0-50">$0 - $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200+">$200+</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <!-- Products will be loaded here via JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+styles.css
+css
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2a7fba;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1a5f8b;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #2a7fba;
+    font-size: 28px;
+}
+
+.logo p {
+    color: #666;
+    font-size: 14px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2a7fba;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Featured Categories */
+.featured-categories {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.featured-categories h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #2a7fba;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.category-card .btn {
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 80px 5%;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #2a7fba;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature i {
+    font-size: 40px;
+    color: #2a7fba;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Products Page */
+.products-main {
+    padding: 50px 5%;
+}
+
+.products-filter {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-options select {
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #2a7fba;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a7fba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #1a5f8b;
+}
+
+/* Footer */
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 50px 5% 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2a7fba;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+    color: #2a7fba;
+}
+
+.footer-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 400px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .filter-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-options select {
+        margin: 5px 0;
+    }
+}
+script.js
+javascript
+// Sample product data
+const products = [
+    {
+        id: 1,
+        name: "Premium Knee Brace",
+        category: "knee",
+        price: 59.99,
+        description: "Provides support and stability for injured knees",
+        image: "images/knee-brace-1.jpg"
+    },
+    {
+        id: 2,
+        name: "Lumbar Back Support",
+        category: "back",
+        price: 39.99,
+        description: "Helps alleviate lower back pain and improve posture",
+        image: "images/back-support-1.jpg"
+    },
+    {
+        id: 3,
+        name: "Ankle Stabilizer",
+        category: "ankle",
+        price: 29.99,
+        description: "Perfect for sprained ankles and rehabilitation",
+        image: "images/ankle-brace-1.jpg"
+    },
+    {
+        id: 4,
+        name: "Wrist Support Brace",
+        category: "wrist",
+        price: 24.99,
+        description: "Relieves carpal tunnel and wrist pain",
+        image: "images/wrist-brace-1.jpg"
+    },
+    {
+        id: 5,
+        name: "Advanced Knee Support",
+        category: "knee",
+        price: 79.99,
+        description: "With adjustable straps for customized fit",
+        image: "images/knee-brace-2.jpg"
+    },
+    {
+        id: 6,
+        name: "Posture Corrector",
+        category: "back",
+        price: 49.99,
+        description: "Helps correct slouching and improves posture",
+        image: "images/back-support-2.jpg"
+    }
+];
+
+// Cart functionality
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function updateCartCount() {
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    document.querySelector('.cart-count').textContent = count;
+}
+
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    const existingItem = cart.find(item => item.id === productId);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    alert(`${product.name} added to cart!`);
+}
+
+// Load products on products page
+function loadProducts() {
+    if (window.location.pathname.includes('products.html')) {
+        const productsGrid = document.querySelector('.products-grid');
+        const categoryFilter = document.getElementById('category-filter');
+        const priceFilter = document.getElementById('price-filter');
+        
+        // Get category from URL if present
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+        
+        if (categoryParam) {
+            categoryFilter.value = categoryParam;
+        }
+        
+        function renderProducts() {
+            productsGrid.innerHTML = '';
+            
+            const selectedCategory = categoryFilter.value;
+            const selectedPrice = priceFilter.value;
+            
+            let filteredProducts = products;
+            
+            // Filter by category
+            if (selectedCategory !== 'all') {
+                filteredProducts = filteredProducts.filter(
+                    product => product.category === selectedCategory
+                );
+            }
+            
+            // Filter by price
+            if (selectedPrice !== 'all') {
+                const [min, max] = selectedPrice.split('-').map(Number);
+                
+                filteredProducts = filteredProducts.filter(product => {
+                    if (selectedPrice.endsWith('+')) {
+                        return product.price >= min;
+                    }
+                    return product.price >= min && product.price <= max;
+                });
+            }
+            
+            if (filteredProducts.length === 0) {
+                productsGrid.innerHTML = '<p>No products found matching your criteria.</p>';
+                return;
+            }
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                        <button class="add-to-cart" onclick="addToCart(${product.id})">
+                            Add to Cart
+                        </button>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        }
+        
+        // Initial render
+        renderProducts();
+        
+        // Add event listeners for filters
+        categoryFilter.addEventListener('change', renderProducts);
+        priceFilter.addEventListener('change', renderProducts);
+    }
+}
+
+// Newsletter form submission
+function handleNewsletter() {
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            // In a real app, you would send this to your server
+            alert(`Thank you for subscribing with ${email}!`);
+            this.reset();
+        });
+    }
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+    loadProducts();
+    handleNewsletter();
+});
+Backend (Node.js/Express)
+server.js
+javascript
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Database connection (example with MongoDB)
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/orthocare', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+// Product model
+const Product = mongoose.model('Product', {
+    name: String,
+    category: String,
+    price: Number,
+    description: String,
+    image: String,
+    stock: Number
+});
+
+// Order model
+const Order = mongoose.model('Order', {
+    customer: {
+        name: String,
+        email: String,
+        address: String,
+        phone: String
+    },
+    products: [{
+        productId: mongoose.Schema.Types.ObjectId,
+        quantity: Number,
+        price: Number
+    }],
+    total: Number,
+    status: { type: String, default: 'pending' },
+    createdAt: { type: Date, default: Date.now }
+});
+
+// API Routes
+
+// Get all products
+app.get('/api/products', async (req, res) => {
+    try {
+        const { category, minPrice, maxPrice } = req.query;
+        const filter = {};
+        
+        if (category) filter.category = category;
+        if (minPrice || maxPrice) {
+            filter.price = {};
+            if (minPrice) filter.price.$gte = Number(minPrice);
+            if (maxPrice) filter.price.$lte = Number(maxPrice);
+        }
+        
+        const products = await Product.find(filter);
+        res.json(products);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Get single product
+app.get('/api/products/:id', async (req, res) => {
+    try {
+        const product = await Product.findById(req.params.id);
+        if (!product) return res.status(404).json({ error: 'Product not found' });
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Create order
+app.post('/api/orders', async (req, res) => {
+    try {
+        const { customer, products } = req.body;
+        
+        // Validate products and calculate total
+        let total = 0;
+        const productDetails = [];
+        
+        for (const item of products) {
+            const product = await Product.findById(item.productId);
+            if (!product) {
+                return res.status(400).json({ error: `Product ${item.productId} not found` });
+            }
+            if (product.stock < item.quantity) {
+                return res.status(400).json({ error: `Not enough stock for ${product.name}` });
+            }
+            
+            total += product.price * item.quantity;
+            productDetails.push({
+                productId: product._id,
+                quantity: item.quantity,
+                price: product.price
+            });
+        }
+        
+        // Create order
+        const order = new Order({
+            customer,
+            products: productDetails,
+            total
+        });
+        
+        await order.save();
+        
+        // Update stock (in a real app, you might want to do this after payment)
+        for (const item of products) {
+            await Product.findByIdAndUpdate(item.productId, {
+                $inc: { stock: -item.quantity }
+            });
+        }
+        
+        res.status(201).json(order);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Serve frontend
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+package.json
+json
+{
+  "name": "orthocare-ecommerce",
+  "version": "1.0.0",
+  "description": "Orthopaedic E-Commerce Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
